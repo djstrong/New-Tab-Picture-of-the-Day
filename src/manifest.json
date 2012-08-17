@@ -1,6 +1,6 @@
 {
   "name": "New Tab - Picture of the Day",
-  "version": "0.1.2",
+  "version": "0.2",
   "manifest_version": 2,
   "description": "Shows a picture of the day on new tab page.",
   "options_page": "options.html",
@@ -9,6 +9,9 @@
   },
   "chrome_url_overrides": {
     "newtab": "apod.html"
+  },
+  "background": {
+    "scripts": ["bg.js"]
   },
   "permissions": [
     "http://apod.nasa.gov/apod/astropix.html",
