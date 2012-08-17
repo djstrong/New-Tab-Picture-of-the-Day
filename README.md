@@ -1,4 +1,4 @@
-New Tab - Pictore of the Day
+New Tab - Picture of the Day
 ===========================
 
 Shows a picture of the day on new tab page.
