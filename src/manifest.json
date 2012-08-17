@@ -1,0 +1,20 @@
+{
+  "name": "New Tab - Pictore of the Day",
+  "version": "0.1.1",
+  "manifest_version": 2,
+  "description": "Shows a picture of the day on new tab page.",
+  "options_page": "options.html",
+  "icons": {
+    "128" : "icon.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "apod.html"
+  },
+  "permissions": [
+    "http://apod.nasa.gov/apod/astropix.html",
+    "http://earthobservatory.nasa.gov/IOTD/",
+    "http://www.euronews.com/picture-of-the-day/",
+    "http://photography.nationalgeographic.com/photography/photo-of-the-day/",
+    "http://thepaperwall.com/"
+  ]
+}
