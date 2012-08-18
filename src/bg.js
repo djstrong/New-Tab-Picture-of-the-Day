@@ -9,18 +9,21 @@ function doCall(link) {
   return http.responseText;
 }
 
-function NationalGeographicPhotoOfTheDay() {
-  response = doCall('http://photography.nationalgeographic.com/photography/photo-of-the-day/')
-  m = response.match(new RegExp('<div class="download_link"><a href="(.*?)"'));
-  if (m==null) return null;
-  return m[1];
-}
-
 function PaperWallWallpaperOfTheDay() {
   response = doCall('http://thepaperwall.com/')
   m = response.match(new RegExp('<img src=".*?image=(.*?)"'));
   if (m==null) return null;
   return 'http://thepaperwall.com'+m[1];
+}
+
+function NationalGeographicPhotoOfTheDay() {
+  response = doCall('http://photography.nationalgeographic.com/photography/photo-of-the-day/')
+  m = response.match(new RegExp('<div class="download_link"><a href="(.*?)"'));
+  if (m==null) {
+    m = response.match(new RegExp('<img src="(http://images\.nationalgeographic\.com/wpf/media-live.*?)"'));
+    if (m==null) return null;
+  }
+  return m[1];
 }
 
 function euronewsPictureOfTheDay() {
