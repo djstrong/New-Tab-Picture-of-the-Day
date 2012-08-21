@@ -1,6 +1,6 @@
 {
   "name": "New Tab - Picture of the Day",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "manifest_version": 2,
   "description": "Shows a picture of the day on new tab page.",
   "options_page": "options.html",
@@ -19,5 +19,6 @@
     "http://www.euronews.com/picture-of-the-day/",
     "http://photography.nationalgeographic.com/photography/photo-of-the-day/",
     "http://thepaperwall.com/"
-  ]
+  ],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
 }

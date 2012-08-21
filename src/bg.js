@@ -49,6 +49,15 @@ function EarthObservatoryImageOfTheDay() {
 
 services = [PaperWallWallpaperOfTheDay, NationalGeographicPhotoOfTheDay, euronewsPictureOfTheDay, AstronomyPictureOfTheDay, EarthObservatoryImageOfTheDay]
 
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-34191277-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = 'https://ssl.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
 function start(url) {
   var urls = JSON.parse(localStorage["urls"]);
   for (i=0; i<services.length; ++i) {
@@ -56,6 +65,8 @@ function start(url) {
     urls[i] = url
   }
   localStorage["urls"] = JSON.stringify(urls);
+  
+  _gaq.push(['_trackEvent', 'Background', 'Start function']);
   
   setTimeout(start, 3600000);
 }

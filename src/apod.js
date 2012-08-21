@@ -15,4 +15,3 @@ document.addEventListener('DOMContentLoaded', function () {
   document.body.style.backgroundPosition="center"
   document.body.style.backgroundSize="cover"
 });
-
