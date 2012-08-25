@@ -1,6 +1,6 @@
 {
   "name": "New Tab - Picture of the Day",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "manifest_version": 2,
   "description": "Shows a picture of the day on new tab page.",
   "options_page": "options.html",
